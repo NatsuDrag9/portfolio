@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="./css/style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js" crossorigin="anonymous"></script>
+    <title>Rohit Imandi</title>
+</head>
+<body>
+    <div class="container">
+        <!-- Side bar section -->
+        <div class="side-bar">
+            <input type="checkbox" class="side-bar__checkbox" id="side-bar-toggle">
+            <label for="side-bar-toggle" class="side-bar__button">
+                <span class="side-bar__icon"></span>
+            </label>
+            
+            <!-- Navigation -->
+            <div class="navigation">
+                <ul class="navigation__list">
+                    <li class="navigation__list-item display-mode">
+                        <i class="fas fa-sun"></i>
+                        <label class="display-mode__toggle">
+                            <input type="checkbox" onclick="displayToggle(this)" checked>
+                            <span class="slider round"></span>
+                        </label>
+                        <i class="fas fa-moon"></i>
+                    </li>
+                    <li class="navigation__list-item">
+                        <a href="#home" onclick="makeActive(this)" class="active"><i class="fa fa-home" aria-hidden="true"></i>Home</a>
+                    </li>
+                    <li class="navigation__list-item">
+                        <a href="#about-me" onclick="makeActive(this)"><i class="fa fa-user" aria-hidden="true"></i>About Me</a>
+                    </li>
+                    <li class="navigation__list-item">
+                        <a href="#portfolio" onclick="makeActive(this)"><i class="fa fa-briefcase" aria-hidden="true"></i>Portfolio</a>
+                    </li>
+                    <li class="navigation__list-item navigation__skills">
+                        <a href="#skills" onclick="makeActive(this)"><i class="fa fa-cogs" aria-hidden="true"></i>Skills</a>
+                    </li>
+                    <li class="navigation__list-item">
+                        <a href="#contact-me" onclick="makeActive(this)"><i class="fa fa-address-book" aria-hidden="true"></i>Contact Me</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Main -->
+        <main class="sections">
+            <section class="section home" id="home">
+                <div class="bg-video">
+                    <video class="bg-video__content" autoplay muted loop>
+                        <source src="img/video.mp4" type="video/mp4">
+                        <source src="img/video.webm" type="video/webm">
+                        Your browser is not supported!
+                    </video>
+                </div>
+                <div class="home-text-wrapper">
+                    <h4 class="heading-1">Hello, I am</h4>
+                    <h2 class="heading-2">Rohit Imandi</h2>
+                    <p class="text-1">Sustainable Energy, Frontend Developer and Electronics.</p>
+                    <p class="text-2">Anime Freak.</p>
+                    <p class="text-3">Affected by Curiosity.</p>
+                </div>
+            </section>
+            <section class="section about-me" id="about-me">
+                <h4 class="heading-1">Pleased to meet you! Time to know me better</h4>
+                <div class="about-me__content">
+                    <div class="about-me__content-img-wrapper">
+                        <img src="./img/Passport_size_photo_4.jpg" alt="">
+                    </div>
+                    <div class="about-me__content-text-wrapper">
+                        <p class="text-1">
+                            In June 2020, I graduated with a Bachelor's degree in Electronics and Communication Engineering from Bennett University, India.
+                            Following my interest in Energy Systems, I decided to pursue MSc in Sustainable Energy Systems from Technical University of Denmark (DTU) in Lyngby, 
+                            Denmark from 2021 to 2023. During lockdown, I grew fond of frontend development and gave it a shot. After over 3 months of continuous practice, I
+                            ended up developing a portfolio for myself! <br> I would like to learn, grow and test my skills as a frontend developer. Hence, I am looking
+                            for professional projects or part-time jobs as a frontend developer in Lyngby and Copenhagen area. I am also open to work remotely.
+                        </p>
+                    </div>
+                </div>
+            </section>
+            <section class="section portfolio" id="portfolio">
+                <h4 class="heading-1">Projects</h4>
+                <div class="portfolio__wrapper">
+                    <div class="card portfolio-1">
+                        <div class="card__image">
+                            <img src="./img/natours.jpg" alt="Natours">
+                        </div>
+                        <a href="https://natsudrag9.github.io/natours/"><h4 class="card__heading">Natours</h4></a>
+                        <div class="card__details">
+                            <ul>
+                                <li><i class="fab fa-html5" aria-hidden="true" style="color: #e34c26; font-size: 1.5rem;"></i>HTML</li>
+                                <li><i class="fab fa-css3" aria-hidden="true" style="color: #264de4;  font-size: 1.5rem;"></i>CSS</li>
+                                <li><i class="fab fa-js" aria-hidden="true" style="color: #f0db4f;  font-size: 1.5rem;"></i>JS</li>
+                                <li><i class="fab fa-sass" aria-hidden="true" style="color: #cc6699;  font-size: 1.5rem;"></i>Sass</li>
+                                <li><a href="https://github.com/NatsuDrag9/natours"><i class="fas fa-code"></i>Code</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="card portfolio-2">
+                        <div class="card__image">
+                            <img src="./img/trillo.jpg" alt="Trillo">
+                        </div>
+                        <a href="https://natsudrag9.github.io/trillo/"><h4 class="card__heading">Trillo</h4></a>
+                        <div class="card__details">
+                            <ul>
+                                <li><i class="fab fa-html5" aria-hidden="true" style="color: #e34c26; font-size: 1.5rem;"></i>HTML</li>
+                                <li><i class="fab fa-css3" aria-hidden="true" style="color: #264de4;  font-size: 1.5rem;"></i>CSS</li>
+                                <li><i class="fab fa-js" aria-hidden="true" style="color: #f0db4f;  font-size: 1.5rem;"></i>JS</li>
+                                <li><i class="fab fa-sass" aria-hidden="true" style="color: #cc6699;  font-size: 1.5rem;"></i>Sass</li>
+                                <li><a href="https://github.com/NatsuDrag9/trillo"><i class="fas fa-code"></i>Code</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="card portfolio-3">
+                        <div class="card__image">
+                            <img src="./img/nexter.jpg" alt="Nexter">
+                        </div>
+                        <a href="https://natsudrag9.github.io/nexter/"><h4 class="card__heading">Nexter</h4></a>
+                        <div class="card__details">
+                            <ul>
+                                <li><i class="fab fa-html5" aria-hidden="true" style="color: #e34c26; font-size: 1.5rem;"></i>HTML</li>
+                                <li><i class="fab fa-css3" aria-hidden="true" style="color: #264de4;  font-size: 1.5rem;"></i>CSS</li>
+                                <li><i class="fab fa-js" aria-hidden="true" style="color: #f0db4f;  font-size: 1.5rem;"></i>JS</li>
+                                <li><i class="fab fa-sass" aria-hidden="true" style="color: #cc6699;  font-size: 1.5rem;"></i>Sass</li>
+                                <li><a href="https://github.com/NatsuDrag9/nexter" style="color: rgb(98, 187, 187);"><i class="fas fa-code"></i>Code</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="card portfolio-4">
+                        <div class="card__image">
+                            <img src="./img/tanztalk.jpg" alt="TanzTalk.tech">
+                        </div>
+                        <a href="https://responsive-website-2.vercel.app/Responsive_Website_2.html"><h4 class="card__heading">TanzTalk.tech</h4></a>
+                        <div class="card__details">
+                            <ul>
+                                <li><i class="fab fa-html5" aria-hidden="true" style="color: #e34c26; font-size: 1.5rem;"></i>HTML</li>
+                                <li><i class="fab fa-css3" aria-hidden="true" style="color: #264de4;  font-size: 1.5rem;"></i>CSS</li>
+                                <li><i class="fab fa-js" aria-hidden="true" style="color: #f0db4f;  font-size: 1.5rem;"></i>JS</li>
+                                <li><i class="fab fa-bootstrap" aria-hidden="true" style="color: #563d7c;  font-size: 1.5rem;"></i>Bootstrap</li>
+                                <li><a href="https://github.com/NatsuDrag9/nexter"><i class="fas fa-code"></i>Code</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="card portfolio-5">
+                        <div class="card__image">
+                            <img src="./img/ip-address-tracker.png" alt="Ip address tracker">
+                        </div>
+                        <a href="https://natsudrag9.github.io/ip-address-tracker/"><h4 class="card__heading">IP Address Tracker</h4></a>
+                        <div class="card__details">
+                            <ul>
+                                <li><i class="fab fa-html5" aria-hidden="true" style="color: #e34c26; font-size: 1.5rem;"></i>HTML</li>
+                                <li><i class="fab fa-css3" aria-hidden="true" style="color: #264de4;  font-size: 1.5rem;"></i>CSS</li>
+                                <li><i class="fab fa-js" aria-hidden="true" style="color: #f0db4f;  font-size: 1.5rem;"></i>JS</li>
+                                <li><a href="https://github.com/NatsuDrag9/ip-address-tracker"><i class="fas fa-code"></i>Code</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>                
+            </section>
+            <section class="section skills" id="skills">
+                <h4 class="heading-1">Frontend Development Skills</h4>
+                <div class="skills__logos">
+                    <figure class="skills__logo">
+                        <img src="./img/HTML-5.png" alt="HTML5">
+                    </figure>
+                    <figure class="skills__logo">
+                        <img src="./img/js.png" alt="JS">
+                    </figure>
+                    <figure class="skills__logo">
+                        <img src="./img/CSS-3.png" alt="CSS3">
+                    </figure>
+                    <figure class="skills__logo">
+                        <img src="./img/bootstrap-4.png" alt="Bootstrap">
+                    </figure>
+                    <figure class="skills__logo">
+                        <img src="./img/sass.png" alt="Sass">
+                    </figure>
+                </div>
+            </section>
+            <section class="section contact-me" id="contact-me">
+                <h4 class="heading-1">Let's Connect!</h4>
+                <div class="contact-me__wrapper">
+                    <div class="github-wrapper">
+                        <a href="https://github.com/NatsuDrag9">
+                            <i class="fab fa-github" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                    <div class="quora-wrapper">
+                        <a href="https://www.quora.com/profile/Rohit-Imandi-1">
+                            <i class="fab fa-quora" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                    <div class="linkedin-wrapper">
+                        <a href="https://www.linkedin.com/in/rohit-imandi/">
+                            <i class="fab fa-linkedin" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                </div>
+                <h4 class="heading-1" id="email">
+                    <a href="mailto:rohitimandi9@zoho.com" id="email-id">
+                        <i class="fas fa-envelope"></i>
+                        rohitimandi9@zoho.com
+                    </a>
+                </h4>
+            </section>
+        </main>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>
