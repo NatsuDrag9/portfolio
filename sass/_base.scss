@@ -1,0 +1,73 @@
+// Variables
+// $bg-color-primary: #2c3e50;
+// $bg-color-secondary: #a6bad421;
+
+// $font-color-primary: #869cb1;
+// $font-color-primary-light: #aab4be;
+
+// $font-color-secondary: rgb(153, 202, 214);
+
+// RESPONSIVE BREAKPOINTS
+$bp-largest: 87.5em; // 1400px/16px = 87.5em
+$bp-large: 62.5em; // 1000px/16px = 62em
+$bp-medium: 50em; // 800px/16px = 50em
+$bp-small: 37.5em; // 600px/16px = 37.5em
+
+:root {
+
+    // Theme colors
+    --bg-color-primary: #2c3e50;
+    --bg-color-secondary: #a6bad421;
+
+    --font-color-primary-1: #869cb1;
+    --font-color-primary-2: #aab4be;
+    --font-color-secondary: rgb(153, 202, 214);
+    --font-color-tertiary: #2c3e50;
+
+    --side-bar-hover-color: wheat;
+    --side-bar-selection-color: aqua;
+
+    --box-shadow-color: #1b2838;
+
+    // Light Theme
+    // --bg-color-primary-light: #fff;
+    // nexter html, css, code color: black
+    // Hello I am color: #7e8286;
+    // Rohit Imandi color: #686765;
+    // Sustainable Energy color: #636566;
+    // Github icon color: #000
+    // Let's connect color: #5b5c5e;
+    // Linkedin color dark: #1fb3f8;
+    // Linkedin color light: #0e76a8;
+    // Side bar box shadow color: #1b2838;
+    // Side bar box shadow light color: wheat
+
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+html, body {
+    box-sizing: inherit;
+    font-size: 62.5%;   // 10px/16px = 62.5% --> 1rem = 10px
+
+    @media screen and (max-width: $bp-large) {
+        font-size: 50%;
+    }
+
+    @media screen and (min-width: $bp-largest) {
+        font-size: 87.5%;
+    }
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
+    line-height: 1.6;
+}
