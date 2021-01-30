@@ -31,39 +31,47 @@ function makeActive(anchor_tag) {
 }
 
 // Sidebar slide
-max_width.addEventListener("change", () => {
+window.addEventListener("resize", () => {
   let check_box = document.getElementsByClassName("side-bar__checkbox")[0];
-  check_box.addEventListener("click", () => {
-    console.log("clicked");
-    if (check_box.checked) {
-      side_bar.style.width = "100%";
-      navigation.style.transform = "translateX(0)";
-      navigation.style.opacity = "1";
-      nav_button.style.transform = "translateX(0)";
-    }
-    else {
-      side_bar.style.width = "8rem";
-      navigation.style.opacity = "0";
-      navigation.style.transform = "translateX(-10rem)";
-      nav_button.style.transform = "translateX(-1.5rem)";
-    }
-  });
-});
-
-function sidebarSlide(check_box) {
-  if (check_box.checked) {
-    side_bar.style.width = "100%";
+  if (window.innerWidth < 800) {
+    check_box.addEventListener("click", () => {
+      console.log("clicked");
+      if (check_box.checked) {
+        side_bar.style.width = "100%";
+        navigation.style.transform = "translateX(0)";
+        navigation.style.opacity = "1";
+        nav_button.style.transform = "translateX(0)";
+      }
+      else {
+        side_bar.style.width = "8rem";
+        navigation.style.opacity = "0";
+        navigation.style.transform = "translateX(-10rem)";
+        nav_button.style.transform = "translateX(-1.5rem)";
+      }
+    });
+  }
+  else {
+    side_bar.style.width = "20rem";
     navigation.style.transform = "translateX(0)";
     navigation.style.opacity = "1";
     nav_button.style.transform = "translateX(0)";
   }
-  else {
-    side_bar.style.width = "8rem";
-    navigation.style.opacity = "0";
-    navigation.style.transform = "translateX(-10rem)";
-    nav_button.style.transform = "translateX(-1.5rem)";
-  }
-}
+});
+
+// function sidebarSlide(check_box) {
+//   if (check_box.checked) {
+//     side_bar.style.width = "100%";
+//     navigation.style.transform = "translateX(0)";
+//     navigation.style.opacity = "1";
+//     nav_button.style.transform = "translateX(0)";
+//   }
+//   else {
+//     side_bar.style.width = "8rem";
+//     navigation.style.opacity = "0";
+//     navigation.style.transform = "translateX(-10rem)";
+//     nav_button.style.transform = "translateX(-1.5rem)";
+//   }
+// }
 
 // Display mode toggle
 function displayToggle(check_box) {  
