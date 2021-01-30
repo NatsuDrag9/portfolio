@@ -518,12 +518,11 @@ a {
         grid-column: 1 / 1;
         grid-row: 5 / 6; } }
   .portfolio-6:hover .card__heading {
-    top: 5%;
-    transform: translate(-50%, 0); }
+    transform: translate(-50%, 80%);
+    color: wheat; }
     @media screen and (max-width: 50em) {
       .portfolio-6:hover .card__heading {
         transform: translate(-50%, 60%);
-        color: #ff9843;
         grid-column: 1 / 1;
         grid-row: 6 / 7; } }
 

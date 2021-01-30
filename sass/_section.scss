@@ -292,12 +292,11 @@
     &-6 {
 
         &:hover .card__heading {
-            top: 5%;
-            transform: translate(-50%, 0);
+            transform: translate(-50%, 80%);
+            color: wheat;
 
             @media screen and (max-width: $bp-medium) {
                 transform: translate(-50%, 60%);
-                color: rgb(255, 152, 67);
                 grid-column: 1 / 1;
                 grid-row: 6 / 7;
             }
