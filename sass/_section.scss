@@ -197,7 +197,7 @@
 
         @media screen and (max-width: $bp-medium) {
             grid-template-columns: 1fr;
-            grid-template-rows: repeat(5, 30rem);
+            grid-template-rows: repeat(6, 30rem);
         }
     }
 
@@ -286,6 +286,21 @@
         @media screen and (max-width: $bp-medium) {
             grid-column: 1 / 1;
             grid-row: 5 / 6;
+        }
+    }
+
+    &-6 {
+
+        &:hover .card__heading {
+            top: 5%;
+            transform: translate(-50%, 0);
+
+            @media screen and (max-width: $bp-medium) {
+                transform: translate(-50%, 60%);
+                color: rgb(255, 152, 67);
+                grid-column: 1 / 1;
+                grid-row: 6 / 7;
+            }
         }
     }
 }
