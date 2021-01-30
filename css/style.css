@@ -66,7 +66,7 @@ body {
     box-shadow: 0 0 0.1rem 0.1rem rgba(203, 218, 228, 0.599);
     border-radius: 5px;
     transition: all 0.5s;
-    display: inline-block; }
+    display: none; }
     @media screen and (max-width: 50em) {
       .side-bar__button {
         display: inline-block; } }
