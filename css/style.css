@@ -322,7 +322,7 @@ a {
   margin: 2rem 5rem;
   border: 5px solid rgba(120, 129, 149, 0.19);
   border-radius: 5px;
-  height: 95%;
+  height: 95vh;
   scrollbar-color: aqua var(--bg-color-primary);
   scrollbar-width: thin; }
   @media screen and (max-width: 62.5em) {
@@ -379,14 +379,20 @@ a {
     @media screen and (max-width: 50em) {
       .home .heading-2 {
         font-size: 4rem; } }
-  .home .text-1, .home .text-2, .home .text-3 {
+  .home .text-1,
+  .home .text-2,
+  .home .text-3 {
     opacity: 0;
     animation: moveInLeft 2s ease-in forwards; }
     @media screen and (max-width: 62.5em) {
-      .home .text-1, .home .text-2, .home .text-3 {
+      .home .text-1,
+      .home .text-2,
+      .home .text-3 {
         margin: 1rem 0; } }
     @media screen and (min-width: 87.5em) {
-      .home .text-1, .home .text-2, .home .text-3 {
+      .home .text-1,
+      .home .text-2,
+      .home .text-3 {
         margin: 0.5rem 0; } }
   @media screen and (max-width: 62.5em) {
     .home .text-1 {
@@ -484,7 +490,8 @@ a {
       .portfolio-3 {
         grid-column: 1 / 1;
         grid-row: 3 / 4; } }
-    .portfolio-3 .card__heading, .portfolio-3 .card__details {
+    .portfolio-3 .card__heading,
+    .portfolio-3 .card__details {
       color: #62bbbb; }
     .portfolio-3 .card__details a {
       text-decoration: underline; }
@@ -495,7 +502,8 @@ a {
       .portfolio-4 {
         grid-column: 1 / 1;
         grid-row: 4 / 5; } }
-    .portfolio-4:hover .card__heading, .portfolio-4:hover .card__details {
+    .portfolio-4:hover .card__heading,
+    .portfolio-4:hover .card__details {
       color: wheat; }
     .portfolio-4 .card__details a {
       color: wheat;
@@ -598,7 +606,9 @@ a {
       font-size: 4rem; }
     .contact-me__wrapper .fab.fa-github {
       color: white; }
-    .contact-me__wrapper .quora-wrapper, .contact-me__wrapper .github-wrapper, .contact-me__wrapper .linkedin-wrapper {
+    .contact-me__wrapper .quora-wrapper,
+    .contact-me__wrapper .github-wrapper,
+    .contact-me__wrapper .linkedin-wrapper {
       display: inline-block;
       margin: 0 5rem; }
     .contact-me__wrapper .fab.fa-quora {
@@ -613,7 +623,8 @@ a {
         margin-left: auto; } }
   .contact-me #email a {
     color: wheat; }
-  .contact-me #email a:hover i, .contact-me #email a:focus i {
+  .contact-me #email a:hover i,
+  .contact-me #email a:focus i {
     color: var(--side-bar-selection-color); }
 
 @keyframes moveInLeft {
