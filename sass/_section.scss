@@ -1,435 +1,438 @@
 .section {
-    padding: 2rem;
-    margin: 2rem 5rem;
-    border: 5px solid rgba(120, 129, 149, 0.19);
-    border-radius: 5px;
-    height: 95%;
-    scrollbar-color: aqua var(--bg-color-primary);
-    scrollbar-width: thin;
+  padding: 2rem;
+  margin: 2rem 5rem;
+  border: 5px solid rgba(120, 129, 149, 0.19);
+  border-radius: 5px;
+  height: 95vh;
+  scrollbar-color: aqua var(--bg-color-primary);
+  scrollbar-width: thin;
 
+  @media screen and (max-width: $bp-large) {
+    margin: 2rem;
+  }
+  & .heading-1 {
+    margin-top: 2rem;
+    text-align: center;
+  }
+  &::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+  }
+
+  & .heading-1 {
     @media screen and (max-width: $bp-large) {
-        margin: 2rem;
+      margin-top: 4rem;
     }
-    & .heading-1 {
-        margin-top: 2rem;
-        text-align: center;
-    }
-    &::-webkit-scrollbar-thumb {
-        border-radius: 10px;
-    }
-
-    & .heading-1 {
-        @media screen and (max-width: $bp-large) {
-            margin-top: 4rem;
-        }
-    }
+  }
 }
 
 .bg-video {
-    position: absolute;
-    top: 0;
-    left: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 0;
+  opacity: 0.1;
+  overflow: hidden;
+
+  &__content {
     height: 100%;
     width: 100%;
-    z-index: 0;
-    opacity: 0.1;
-    overflow: hidden;
-
-    &__content {
-        height: 100%;
-        width: 100%;
-        object-fit: cover; // Object-fit works with html elements unlike background-size: cover which works with background elements.The element (here video__content) will fill the entire parent while still maintaining the aspect ratio
-    }
+    object-fit: cover; // Object-fit works with html elements unlike background-size: cover which works with background elements.The element (here video__content) will fill the entire parent while still maintaining the aspect ratio
+  }
 }
 
 .home {
-    padding: 0;
-    position: relative;
+  padding: 0;
+  position: relative;
 
-    &-text-wrapper {
-        margin: 15rem 10rem;
-        width: 100%;
+  &-text-wrapper {
+    margin: 15rem 10rem;
+    width: 100%;
 
-        @media screen and (max-width: $bp-large) {
-            margin: 25rem 10rem;
-        }
-
-        @media screen and (max-width: $bp-medium) {
-            margin-left: 5rem;
-            width: 70%;
-        }
-
-        @media screen and (max-width: $bp-small) {
-            margin-left: 2rem;
-        }
+    @media screen and (max-width: $bp-large) {
+      margin: 25rem 10rem;
     }
 
-    & .heading-1 {
-        font-size: 3.2rem;
-        text-align: left;
-        margin-top: 0;
+    @media screen and (max-width: $bp-medium) {
+      margin-left: 5rem;
+      width: 70%;
     }
 
-    & .heading-2 {
-        font-size: 6.5rem;
+    @media screen and (max-width: $bp-small) {
+      margin-left: 2rem;
+    }
+  }
 
-        @media screen and (max-width: $bp-large) {
-            font-size: 5rem;
-        }
+  & .heading-1 {
+    font-size: 3.2rem;
+    text-align: left;
+    margin-top: 0;
+  }
 
-        @media screen and (max-width: $bp-medium) {
-            font-size: 4rem;
-        }
+  & .heading-2 {
+    font-size: 6.5rem;
+
+    @media screen and (max-width: $bp-large) {
+      font-size: 5rem;
     }
 
-    & .text-1, & .text-2, & .text-3 {
-        opacity: 0;
-        animation: moveInLeft 2s ease-in forwards;
+    @media screen and (max-width: $bp-medium) {
+      font-size: 4rem;
+    }
+  }
 
-        @media screen and (max-width: $bp-large) {
-            margin: 1rem 0;
-        }
+  & .text-1,
+  & .text-2,
+  & .text-3 {
+    opacity: 0;
+    animation: moveInLeft 2s ease-in forwards;
 
-        @media screen and (min-width: $bp-largest) {
-            margin: 0.5rem 0;
-        }
+    @media screen and (max-width: $bp-large) {
+      margin: 1rem 0;
+    }
+
+    @media screen and (min-width: $bp-largest) {
+      margin: 0.5rem 0;
+    }
+  }
+
+  & .text-1 {
+    @media screen and (max-width: $bp-large) {
+      width: 70%;
+    }
+  }
+
+  & .text-2 {
+    animation: moveInRight 2s ease-in 2s forwards;
+  }
+
+  & .text-3 {
+    animation-delay: 4s;
+  }
+}
+
+.about-me {
+  &__content {
+    display: flex;
+    margin-top: 5rem;
+    line-height: 2.5rem;
+
+    @media screen and (max-width: $bp-large) {
+      margin-top: 7rem;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    @media screen and (min-width: $bp-largest) {
+      margin: 5rem auto;
+      width: 70%;
+      line-height: 3rem;
     }
 
     & .text-1 {
-        @media screen and (max-width: $bp-large) {
-            width: 70%;
-        }
+      font-size: 1.3rem;
+
+      @media screen and (max-width: $bp-small) {
+        font-size: 1.1rem;
+        line-height: 1.5rem;
+      }
     }
 
-    & .text-2 {
-        animation: moveInRight 2s ease-in 2s forwards;
+    &-img-wrapper {
+      width: 15rem;
+      height: 18rem;
+      border: 5px solid rgba(120, 129, 149, 0.19);
+      border-radius: 5px;
+      padding: 1rem;
+      margin: auto 4rem;
+
+      @media screen and (max-width: $bp-large) {
+        margin: 0 0 2rem 0;
+      }
+
+      @media screen and (min-width: $bp-largest) {
+        margin: auto 6rem auto 2rem;
+      }
+
+      img {
+        width: 12rem;
+        height: 15rem;
+      }
     }
 
-    & .text-3 {
-        animation-delay: 4s;
+    &-text-wrapper {
+      margin: 0;
+
+      @media screen and (max-width: $bp-large) {
+        margin: 2rem 4rem;
+      }
+
+      @media screen and (max-width: $bp-medium) {
+        margin: 0;
+      }
+
+      @media screen and (max-width: $bp-small) {
+        margin: 1rem 0 0 1rem;
+      }
     }
-}
-
-
-.about-me {
-    
-    &__content {
-        display: flex;
-        margin-top: 5rem;
-        line-height: 2.5rem;
-
-        @media screen and (max-width: $bp-large) {
-            margin-top: 7rem;
-            flex-direction: column;
-            align-items: center;
-        }
-
-        @media screen and (min-width: $bp-largest) {
-            margin: 5rem auto;
-            width: 70%;
-            line-height: 3rem;
-        }
-
-        & .text-1 {
-            font-size: 1.3rem;
-
-            @media screen and (max-width: $bp-small) {
-                font-size: 1.1rem;
-                line-height: 1.5rem;
-            }
-        }
-
-        &-img-wrapper {
-            width: 15rem;
-            height: 18rem;
-            border: 5px solid rgba(120, 129, 149, 0.19);
-            border-radius: 5px;
-            padding: 1rem;
-            margin: auto 4rem;
-
-            @media screen and (max-width: $bp-large) {
-                margin: 0 0 2rem 0;
-            }
-            
-            @media screen and (min-width: $bp-largest) {
-                margin: auto 6rem auto 2rem;
-            }
-    
-            img {
-                width: 12rem;
-                height: 15rem;
-            }
-        }
-
-        &-text-wrapper {
-            margin: 0;
-
-            @media screen and (max-width: $bp-large) {
-                margin: 2rem 4rem;
-            }
-
-            @media screen and (max-width: $bp-medium) {
-                margin: 0;
-            }
-
-            @media screen and (max-width: $bp-small) {
-                margin: 1rem 0 0 1rem;
-            }
-        }
-    }
-
+  }
 }
 
 .portfolio {
-    overflow-y: scroll;
-    overflow-x: hidden;
+  overflow-y: scroll;
+  overflow-x: hidden;
 
-    &__wrapper {
-        display: grid;
-        grid-template-rows: repeat(3, 40rem);
-        grid-template-columns: repeat(2, 1fr);
-        grid-gap: 3rem;
-        margin-top: 4rem;
+  &__wrapper {
+    display: grid;
+    grid-template-rows: repeat(3, 40rem);
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 3rem;
+    margin-top: 4rem;
 
-        @media screen and (max-width: $bp-large) {
-            margin-top: 7rem;
-        }
-
-        @media screen and (max-width: $bp-medium) {
-            grid-template-columns: 1fr;
-            grid-template-rows: repeat(6, 30rem);
-        }
+    @media screen and (max-width: $bp-large) {
+      margin-top: 7rem;
     }
 
-    &-1 {
-        grid-column: 1 / 2;
-        grid-row: 1 / 2;
+    @media screen and (max-width: $bp-medium) {
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(6, 30rem);
+    }
+  }
 
-        @media screen and (max-width: $bp-medium) {
-            grid-column: 1 / 1;
-            grid-row: 1 / 2;
-        }
+  &-1 {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+
+    @media screen and (max-width: $bp-medium) {
+      grid-column: 1 / 1;
+      grid-row: 1 / 2;
+    }
+  }
+
+  &-2 {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+
+    @media screen and (max-width: $bp-medium) {
+      grid-column: 1 / 1;
+      grid-row: 2 / 3;
     }
 
-    &-2 {
-        grid-column: 2 / 3;
-        grid-row: 1 / 2;
+    & .card__details a {
+      color: var(--bg-color-primary);
+      text-decoration: underline;
+    }
+  }
 
-        @media screen and (max-width: $bp-medium) {
-            grid-column: 1 / 1;
-            grid-row: 2 / 3;
-        }
+  &-3 {
+    grid-row: 2 / 3;
+    grid-column: 1 / 2;
 
-        & .card__details a {
-            color: var(--bg-color-primary);
-            text-decoration: underline;
-        }
+    @media screen and (max-width: $bp-medium) {
+      grid-column: 1 / 1;
+      grid-row: 3 / 4;
     }
 
-    &-3 {
-        grid-row: 2 / 3;
-        grid-column: 1 / 2;
-
-        @media screen and (max-width: $bp-medium) {
-            grid-column: 1 / 1;
-            grid-row: 3 / 4;
-        }
-
-        & .card__heading, & .card__details {
-            color: rgb(98, 187, 187);
-        }
-
-        & .card__details a {
-            text-decoration: underline;
-        }
+    & .card__heading,
+    & .card__details {
+      color: rgb(98, 187, 187);
     }
 
-    &-4 {
-        grid-row: 2 / 3;
-        grid-column: 2 / 3;
+    & .card__details a {
+      text-decoration: underline;
+    }
+  }
 
-        @media screen and (max-width: $bp-medium) {
-            grid-column: 1 / 1;
-            grid-row: 4 / 5;
-        }
+  &-4 {
+    grid-row: 2 / 3;
+    grid-column: 2 / 3;
 
-        &:hover .card__heading, &:hover .card__details {
-            color: wheat;
-        }
-
-        & .card__details a {
-            color: wheat;
-            text-decoration: underline;
-        }
-
-        &:hover .card__heading {
-            transform: translate(-70%, 180%);
-
-            @media screen and (max-width: $bp-medium) {
-                transform: translate(-50%, 150%);
-            }
-        }
-
-        &:hover .card__details {
-            transform: translate(-70%, -120%);
-
-            @media screen and (max-width: $bp-medium) {
-                transform: translate(-50%, -120%);
-            }
-        }
+    @media screen and (max-width: $bp-medium) {
+      grid-column: 1 / 1;
+      grid-row: 4 / 5;
     }
 
-    &-5 {
-        grid-row: 3 / 4;
-        grid-column: 1 / 2;
-
-        @media screen and (max-width: $bp-medium) {
-            grid-column: 1 / 1;
-            grid-row: 5 / 6;
-        }
+    &:hover .card__heading,
+    &:hover .card__details {
+      color: wheat;
     }
 
-    &-6 {
-
-        &:hover .card__heading {
-            transform: translate(-50%, 80%);
-            color: wheat;
-
-            @media screen and (max-width: $bp-medium) {
-                transform: translate(-50%, 60%);
-                grid-column: 1 / 1;
-                grid-row: 6 / 7;
-            }
-        }
+    & .card__details a {
+      color: wheat;
+      text-decoration: underline;
     }
+
+    &:hover .card__heading {
+      transform: translate(-70%, 180%);
+
+      @media screen and (max-width: $bp-medium) {
+        transform: translate(-50%, 150%);
+      }
+    }
+
+    &:hover .card__details {
+      transform: translate(-70%, -120%);
+
+      @media screen and (max-width: $bp-medium) {
+        transform: translate(-50%, -120%);
+      }
+    }
+  }
+
+  &-5 {
+    grid-row: 3 / 4;
+    grid-column: 1 / 2;
+
+    @media screen and (max-width: $bp-medium) {
+      grid-column: 1 / 1;
+      grid-row: 5 / 6;
+    }
+  }
+
+  &-6 {
+    &:hover .card__heading {
+      transform: translate(-50%, 80%);
+      color: wheat;
+
+      @media screen and (max-width: $bp-medium) {
+        transform: translate(-50%, 60%);
+        grid-column: 1 / 1;
+        grid-row: 6 / 7;
+      }
+    }
+  }
 }
 
 .skills {
-    overflow-y: scroll;
-    overflow-x: hidden;
-    
-    &__logos {
-        margin: 2rem 8rem;
-        display: grid;
-        grid-template-rows: repeat(2, 1fr);
-        grid-template-columns: repeat(3, 1fr);
-        grid-gap: 2rem;
+  overflow-y: scroll;
+  overflow-x: hidden;
 
-        @media screen and (max-width: $bp-large) {
-            margin-top: 7rem;
-        }
+  &__logos {
+    margin: 2rem 8rem;
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 2rem;
 
-        @media screen and (max-width: $bp-medium) {
-            grid-template-rows: repeat(3, 1fr);
-            grid-template-columns: repeat(2, 1fr);
-        }
-
-        @media screen and (max-width: $bp-small) {
-            grid-template-columns: 1fr;
-            grid-template-rows: repeat(5, 15rem);
-        }
-
-        @media screen and (min-width: $bp-largest) {
-            margin: 6rem 8rem;
-        }
+    @media screen and (max-width: $bp-large) {
+      margin-top: 7rem;
     }
 
-    &__logo {
-        width: 20rem;
-        height: 20rem;
-        transition: all 0.4s;
-        padding: 2rem;
-
-        @media screen and (max-width: $bp-small) {
-            width: 12rem;
-            height: 12rem;
-        }
-
-        img {
-            width: 16rem;
-            height: 17rem;
-            border-radius: 5px;
-
-            @media screen and (max-width: $bp-small) {
-                width: 11rem;
-                height: 11rem;
-            }
-        }
+    @media screen and (max-width: $bp-medium) {
+      grid-template-rows: repeat(3, 1fr);
+      grid-template-columns: repeat(2, 1fr);
     }
 
-    &__logo:hover {
-        transform: scale(1.2);
+    @media screen and (max-width: $bp-small) {
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(5, 15rem);
     }
 
-    &__logo:last-child {
-        grid-row: 2 / 3;
-        grid-column: 3 / 4;
-
-        @media screen and (max-width: $bp-medium) {
-            grid-row: 3 / 4;
-            grid-column: 1 / 2;
-        }
+    @media screen and (min-width: $bp-largest) {
+      margin: 6rem 8rem;
     }
+  }
+
+  &__logo {
+    width: 20rem;
+    height: 20rem;
+    transition: all 0.4s;
+    padding: 2rem;
+
+    @media screen and (max-width: $bp-small) {
+      width: 12rem;
+      height: 12rem;
+    }
+
+    img {
+      width: 16rem;
+      height: 17rem;
+      border-radius: 5px;
+
+      @media screen and (max-width: $bp-small) {
+        width: 11rem;
+        height: 11rem;
+      }
+    }
+  }
+
+  &__logo:hover {
+    transform: scale(1.2);
+  }
+
+  &__logo:last-child {
+    grid-row: 2 / 3;
+    grid-column: 3 / 4;
+
+    @media screen and (max-width: $bp-medium) {
+      grid-row: 3 / 4;
+      grid-column: 1 / 2;
+    }
+  }
 }
 
 .contact-me {
-    height: 60%;
+  height: 60%;
 
-    &__wrapper {
-        margin: 5rem 20rem;
-        max-width: 60%;
-        min-width: 40%;
-        display: flex;
-        justify-content: space-evenly;
+  &__wrapper {
+    margin: 5rem 20rem;
+    max-width: 60%;
+    min-width: 40%;
+    display: flex;
+    justify-content: space-evenly;
 
-        @media screen and (max-width: $bp-large) {
-            margin-top: 7rem;
-        }
-
-        @media screen and (max-width: $bp-small) {
-            margin: 5rem auto;
-            flex-direction: column;
-            justify-content: space-evenly;
-            width: 5rem;
-            height: 20rem;
-        }
-
-        a i {
-            font-size: 4rem;
-        }
-
-        .fab.fa-github {
-            color: white;
-        }
-
-        .quora-wrapper, .github-wrapper, .linkedin-wrapper {
-            display: inline-block;
-            margin: 0 5rem;
-        }
-        
-        .fab.fa-quora {
-            color: red;
-        }
-
-        .fab.fa-linkedin {
-            color: #1fb3f8;
-        }
+    @media screen and (max-width: $bp-large) {
+      margin-top: 7rem;
     }
 
-    #email {
-        font-size: 2rem;
-
-        @media screen and (max-width: $bp-medium) {
-            font-size: 1.4rem;
-            margin-left: auto;
-        }
+    @media screen and (max-width: $bp-small) {
+      margin: 5rem auto;
+      flex-direction: column;
+      justify-content: space-evenly;
+      width: 5rem;
+      height: 20rem;
     }
 
-    #email a {
-        color: wheat;
+    a i {
+      font-size: 4rem;
     }
 
-    #email a:hover i, #email a:focus i {
-        color: var(--side-bar-selection-color);
+    .fab.fa-github {
+      color: white;
     }
+
+    .quora-wrapper,
+    .github-wrapper,
+    .linkedin-wrapper {
+      display: inline-block;
+      margin: 0 5rem;
+    }
+
+    .fab.fa-quora {
+      color: red;
+    }
+
+    .fab.fa-linkedin {
+      color: #1fb3f8;
+    }
+  }
+
+  #email {
+    font-size: 2rem;
+
+    @media screen and (max-width: $bp-medium) {
+      font-size: 1.4rem;
+      margin-left: auto;
+    }
+  }
+
+  #email a {
+    color: wheat;
+  }
+
+  #email a:hover i,
+  #email a:focus i {
+    color: var(--side-bar-selection-color);
+  }
 }
